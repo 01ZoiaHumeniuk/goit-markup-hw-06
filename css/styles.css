@@ -631,6 +631,8 @@ gap: 12px;
       background-color: transparent;
 }
 .footer-button{
+  display: flex;
+  justify-content: center;
   border: none;
   outline: none;
   cursor: pointer;
@@ -639,7 +641,6 @@ gap: 12px;
   line-height: 1.875;
     text-align: center;
     align-items: center;
-    letter-spacing: 6%;
     background-color: var(--color-hover-icone);
     color: var(--main-color);
     border-radius: 4px;
@@ -647,11 +648,12 @@ gap: 12px;
     padding-top: 10px;
     padding-bottom: 10px;
     flex-direction: row;
-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-button:hover,
 .footer-button:focus{
-background-color: var(--background);
+background-color: #188CE8;
   color: var(--main-color);
 }
 .icon-submit{
@@ -660,7 +662,7 @@ background-color: var(--background);
   fill: var(--main-color);
   margin-left: 10px;
   position: relative;
-  top: 8px;
+
 
 }
 
@@ -798,10 +800,7 @@ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
   position: fixed;
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  /*========виправити===========*/
-  transition: opacity 250ms linear, visibility 250ms linear ;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal{
   width: 528px;
@@ -888,7 +887,7 @@ margin-bottom: 12px;
       line-height: 1.1666;
       letter-spacing: 0.01em;
       color: var(--text-paragraph-color);
-      margin: bottom 4px;
+      margin-bottom: 4px;
       display: block;
 }
 .modal-input::placeholder{
@@ -935,23 +934,27 @@ outline: 1px solid var(--color-hover-icone);
     width: 200px;
     height: 50px;
     letter-spacing: 6%;
-    background-color: var(--background);
+    background-color:var(--color-hover-icone);
     color: var(--main-color);
     border: 1px solid rgba(33, 33, 33, 0.2); 
     border-radius: 4px;
     cursor: pointer;
     justify-content: center;
-display: block;
-margin: 0 auto;
-transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.botton-send:hover,
-.botton-send:focus{
-  background-color: var(--background);
+.button-send:hover,
+.button-send:focus{
+  background-color:#188CE8;
     color: var(--main-color);
-}
+} 
 .modal-field{
   padding-left: 10px;
+  padding-top: 20px;
 }
 .checkbox-modal{
   font-weight: 400;
@@ -984,10 +987,8 @@ background-color: var(--color-hover-icone);
 fill: var(--main-color);
 border: none;
 }
-.checkbox-input:focus  +.checkbox-modal{
-box-shadow: 0px 1px 3px #A1BFD7;
+.checkbox-input:focus +.checkbox-modal span { border-color: var(--color-hover-icone);} 
 
-}
 .checkbox-input{
 margin-bottom: 30px;
 
